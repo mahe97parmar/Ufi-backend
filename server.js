@@ -19,8 +19,8 @@ mongoose.connect(MONGODB_URI, { dbName: 'ufi_ngo' })
   .catch(err=> console.error('Mongo error:', err.message))
 
 app.get('/', (req,res)=> res.json({ ok: true, service:'UFI NGO API' }))
-app.use('/api/contact', contactRoutes)
-app.use('/api/donate', donateRoutes)
+//app.use('/api/contact', contactRoutes)
+//app.use('/api/donate', donateRoutes)
 
 const port = process.env.PORT || 5000
 app.listen(port, ()=> console.log('🚀 API running on port', port))
